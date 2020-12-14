@@ -9,7 +9,13 @@ requireAll(require.context('./img/icons', true, /\.svg$/));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './js/components/app/app.jsx';
+import store from './js/store/store';
+import { Provider } from 'react-redux';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<App/>, rootElement);
+ReactDOM.render(
+  <Provider store={store}>
+    <App/>
+  </Provider>
+  , rootElement);

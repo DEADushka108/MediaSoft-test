@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {Router as BrowserRouter, Switch, Route} from 'react-router-dom';
 import history from '../../history/history.js';
 import Main from '../main/main';
 import Cart from '../cart/cart.jsx';
@@ -8,7 +8,7 @@ import {AppRoute} from '../../utils/const.js';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter history={history}>
     <Switch>
       <Route exact path={`${AppRoute.ROOT}`}>
         <Main/>
