@@ -10,4 +10,4 @@ export const FilterSettings = {
   MAX_COUNT: 9,
 };
 
-export const MAX_CARD_COUNT = 4;
+export const MAX_CARD_COUNT = 6;

@@ -1,0 +1,83 @@
+.small-card {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 320px;
+  min-height: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: inset 1px rgba(13, 46, 68, 0.2);
+
+  &:hover {
+    border: none;
+    box-shadow: 5px 20px 50px rgba(13, 46, 68, 0.2);
+  }
+}
+
+.small-card__wrapper {
+  width: 280px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.small-card__image {
+  margin-top: 20px;
+  align-self: center;
+}
+
+.small-card__link {
+  text-decoration: none;
+}
+
+.small-card__button {
+  margin-bottom: 20px;
+  align-self: center;
+  width: 281px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 11px 12px 14px 12px;
+  border-radius: 10px;
+  text-align: center;
+  color: $text-white;
+  font-weight: 700;
+  background-color: $button-blue;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+
+  &:hover,
+  &:focus {
+    color: $text-blue;
+    background-color: transparent;
+    padding: 8px 9px 11px 9px;
+    border: 3px solid $text-blue;
+  }
+
+  &:active {
+    color: rgba($text-blue, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .small-card__link {
+    font-size: 20px;
+  }
+
+  .small-card__price {
+    font-size: 20px;
+  }
+
+  .small-card__wrapper {
+    align-items: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .small-card {
+    margin: 20px;
+  }
+}

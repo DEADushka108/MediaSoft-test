@@ -1,9 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { setCartList } from '../../store/ships/selectors';
 import { AppRoute } from '../../utils/const';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const Header = () => {
+const Header = (props) => {
+  const {shipsList} = props;
+
   return (
     <header className="page-header">
       <div className="page-header__wrapper">
@@ -34,7 +38,7 @@ const Header = () => {
                   <use xlinkHref="#shopping-cart"></use>
                 </svg>
                 <span className="main-nav__text">Cart</span>
-                <span className="main-nav__sub">1</span>
+                <span className="main-nav__sub">{shipsList.length}</span>
               </Link>
             </li>
           </ul>
@@ -44,4 +48,11 @@ const Header = () => {
   );
 }
 
-export default Header;
+Header.propTypes = {};
+
+const mapStateToProps = (state) => ({
+  shipsList: setCartList(state),
+})
+
+export {Header}
+export default connect(mapStateToProps)(Header);

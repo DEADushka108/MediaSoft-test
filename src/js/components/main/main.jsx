@@ -6,9 +6,11 @@ import ShipsList from '../ships-list/ships-list';
 import ShowMoreButton from '../show-more-button/show-more-button';
 import { getActiveRace, getCardCount, getFilteredList, getShipsList } from '../../store/ships/selectors';
 import { connect } from 'react-redux';
+import RaceList from '../race-list/race-list';
+import SortList from '../sort-list/sort-list';
 
 const Main = (props) => {
-  const {filteredShipsList, activeRace, cardCount, shipsList} = props;
+  const {filteredShipsList, cardCount} = props;
 
   return <Fragment>
     <Header/>
@@ -18,9 +20,13 @@ const Main = (props) => {
         <div className="page-content">
           <section className="catalog">
             <h2 className="catalog__title visually-hidden">Catalog</h2>
+            <div className="catalog__wrapper">
+              <RaceList/>
+              <SortList/>
+            </div>
             <ShipsList ships={filteredShipsList} count={cardCount}/>
             <div className="catalog__more">
-              <ShowMoreButton list={shipsList} count={cardCount}/>
+              <ShowMoreButton list={filteredShipsList} count={cardCount}/>
             </div>
           </section>
         </div>

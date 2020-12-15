@@ -9,11 +9,11 @@ const Footer = () => {
         <Link to={AppRoute.ROOT} className="page-footer__logo">
           Starshipsshop
         </Link>
-      </div>
-      <div className="page-footer__copyright">
-        <p className="page-footer__text">
-          © 2020 Stars ships shop Ltd.
-        </p>
+        <div className="page-footer__copyright">
+          <p className="page-footer__text">
+            © 2020 Stars ships shop Ltd.
+          </p>
+        </div>
       </div>
     </footer>
   )

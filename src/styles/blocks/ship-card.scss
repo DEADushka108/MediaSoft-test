@@ -1,0 +1,117 @@
+.ship-card {
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-bottom: 1px solid rgba($text-blue, 0.3);
+  border-top: 1px solid rgba($text-blue, 0.3);
+}
+
+.ship-card__img {
+  width: 320px;
+  height: auto;
+}
+
+.ship-card__button {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  align-self: center;
+  width: 281px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 11px 12px 14px 12px;
+  border-radius: 10px;
+  text-align: center;
+  color: $text-white;
+  font-weight: 700;
+  background-color: $button-blue;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+
+  &:hover,
+  &:focus {
+    color: $text-blue;
+    background-color: transparent;
+    padding: 8px 9px 11px 9px;
+    border: 3px solid $text-blue;
+  }
+
+  &:active {
+    color: rgba($text-blue, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .ship-card {
+    width: 620px;
+  }
+  
+  .ship-card__img {
+    width: 620px;
+    height: auto;
+  }
+
+  .ship-card__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .ship-card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  } 
+
+  .ship-card__description {
+    width: 620px;
+    align-self: center;
+    text-align: center;
+  }
+  
+  .ship-card__button {
+    margin-left: 170px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .ship-card {
+    width: 1320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .ship-card__img {
+    width: 850px;
+  }
+
+  .ship-card__text {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .ship-card__wrapper {
+    align-self: center;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 40px;
+  } 
+
+  .ship-card__description {
+    width: 400px;
+    align-self: flex-start;
+    text-align: left;
+  }
+  
+  .ship-card__button {
+    margin-left: 0;
+    margin-top: 40px;
+    align-self: center;
+    flex-grow: 1;
+    height: 70px;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+}

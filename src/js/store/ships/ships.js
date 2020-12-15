@@ -7,11 +7,13 @@ const initialState = {
   activeRace: FilterSettings.DEFAULT_VALUE,
   cardCount: MAX_CARD_COUNT,
   activeCard: {},
+  activeSort: ``,
 };
 
 const ActionType = {
   SET_ACTIVE_RACE: `SET_ACTIVE_RACE`,
   SET_CARD_COUNT: `SET_CARD_COUNT`,
+  SET_ACTIVE_SORT: `SET_ACTIVE_SORT`,
   UPDATE_STATUS: `UPDATE_STATUS`,
   UPDATE_SHIP_STATUS: `UPDATE_SHIP_STATUS`,
 };
@@ -25,6 +27,10 @@ const ActionCreator = {
     type: ActionType.SET_CARD_COUNT,
     payload: MAX_CARD_COUNT
   }),
+  setActiveSort: (sort) => ({
+    type: ActionType.SET_ACTIVE_SORT,
+    payload: sort,
+  }),
   updateShipStatus: (ship) => ({
     type: ActionType.UPDATE_SHIP_STATUS,
     payload: ship,
@@ -36,6 +42,7 @@ const reducer = (state = initialState, action) => {
     case ActionType.SET_ACTIVE_RACE:
       return extend(state, {
         activeRace: action.payload,
+        cardCount: MAX_CARD_COUNT,
       });
     case ActionType.SET_CARD_COUNT:
       return extend(state, {
@@ -45,6 +52,11 @@ const reducer = (state = initialState, action) => {
       return extend(state, {
         shipsList: state.shipsList.map((ship) => (ship.id === action.payload.id) ? action.payload : ship),
       });
+    case ActionType.SET_ACTIVE_SORT:
+      return extend(state, {
+        activeSort: action.payload,
+        cardCount: MAX_CARD_COUNT,
+      })
   }
   return state;
 }
