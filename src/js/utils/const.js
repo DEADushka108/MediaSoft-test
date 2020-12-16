@@ -3,7 +3,7 @@ export const AppRoute = {
   CONTACT: `/contact`,
   CARD: `/card`,
   CART: `/cart`,
-  FORM: `/form`,
+  FORM: `/order`,
 };
 
 export const FilterSettings = {
