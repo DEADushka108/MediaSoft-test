@@ -9,6 +9,8 @@ import {AppRoute} from '../../utils/const.js';
 import { findItemById } from '../../utils/utils.js';
 import { getShipsList } from '../../store/ships/selectors.js';
 import { connect } from 'react-redux';
+import ContactScreen from '../contact-screen/contact-screen.jsx';
+import FormScreen from '../form-screen/form-screen.jsx';
 
 const App = (props) => {
   const {shipsList} = props;
@@ -27,6 +29,12 @@ const App = (props) => {
         const ship = findItemById(id, shipsList);
         return <CardScreen ship={ship} {...routeProps}/>;
       }}/>
+      <Route exact path={`${AppRoute.CONTACT}`}>
+        <ContactScreen/>
+      </Route>
+      <Route exact path={`${AppRoute.FORM}`}>
+        <FormScreen/>
+      </Route>
     </Switch>
     </BrowserRouter>
   )
