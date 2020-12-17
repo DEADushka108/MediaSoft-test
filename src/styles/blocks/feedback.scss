@@ -26,7 +26,6 @@
 
 .feedback__button {
   margin-bottom: 20px;
-  // margin-left: 20px;
   width: 281px;
   text-decoration: none;
   display: inline-block;
@@ -53,6 +52,24 @@
   &:active {
     color: rgba($text-blue, 0.3);
   }
+}
+
+.feedback__button-back {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 6px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.feedback__arrow-icon {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  top: 8px;
+  left: 0;
+  fill: $text-blue;
+  transform: rotate(180deg);
 }
 
 @media (min-width: $tablet-width) {
@@ -89,5 +106,12 @@
       padding-top: 25px;
       padding-bottom: 25px;
     }
+  }
+  
+  .feedback__arrow-icon {
+    width: 20px;
+    height: 20px;
+    top: 8px;
+    left: 0;
   }
 }

@@ -1,0 +1,151 @@
+.payment {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.payment__img {
+  display: block;
+  width: 180px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.payment__form {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+}
+
+.payment__outro {
+  position: absolute;
+  font-size: 12px;
+}
+
+.payment__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment__item,
+.payment__expire,
+.payment__cvv {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment__input {
+  border-radius: 10px;
+  padding: 10px 10px;
+  appearance: none;
+}
+
+.payment__button {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 281px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 11px 12px 14px 12px;
+  border-radius: 10px;
+  text-align: center;
+  color: $text-white;
+  font-weight: 700;
+  background-color: $button-blue;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+
+  &:hover,
+  &:focus {
+    color: $text-blue;
+    background-color: transparent;
+    padding: 8px 9px 11px 9px;
+    border: 3px solid $text-blue;
+  }
+
+  &:active {
+    color: rgba($text-blue, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .payment {
+    width: 660px;
+  }
+
+  .payment__form {
+    width: 400px;
+  }
+
+  .payment__img {
+    width: 240px;
+    overflow: hidden;
+  }
+
+  .payment__button {
+    width: 350px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .payment {
+    width: 960px;
+    font-size: 26px;
+  }
+
+  .payment__form {
+    width: 960px;
+  }
+
+  .payment__img {
+    width: 500px;
+    overflow: hidden;
+  }
+
+  .payment__label {
+    margin-bottom: 12px;
+  }
+
+  .payment__item,
+  .payment__expire,
+  .payment__cvv {
+    margin-bottom: 17px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .payment__item:last-child {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .payment__input {
+    padding: 25px 40px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba($text-blue, 0.7);
+  }
+
+  .payment__button {
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+    margin-top: 48px;
+    width: 428px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    margin-bottom: 16px;
+
+    &:hover {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+}

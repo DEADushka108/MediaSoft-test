@@ -1,0 +1,33 @@
+.delivery {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.delivery__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.delivery__item {
+  color: $text-light-blue;
+  &--active {
+    color: red;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .delivery {
+    width: 620px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .delivery {
+    width: 960px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Tab = (props) => {
+  console.log(props);
   const {children} = props;
+  console.log(children);
 
   return <React.Fragment>{children}</React.Fragment>;
 };
