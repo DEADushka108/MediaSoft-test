@@ -1,0 +1,83 @@
+.address {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.address__form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin: 0 auto;
+ margin-top: 30px;
+}
+
+.address__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.address__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.address__input {
+  border-radius: 10px;
+  padding: 10px 10px;
+  appearance: none;
+}
+
+@media (min-width: $tablet-width) {
+  .address {
+    width: 640px;
+  }
+
+  .address__form {
+    width: 400px;
+  }
+
+  .address__button {
+    width: 350px;
+  }
+  
+  .address__map {
+    margin: 0 auto;
+    width: 400px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address {
+    width: 960px;
+    font-size: 26px;
+  }
+
+  .address__form {
+    width: 960px;
+  }
+
+  .address__label {
+    margin-bottom: 12px;
+  }
+
+  .address__item {
+    margin-bottom: 17px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .address__input {
+    padding: 25px 40px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba($text-blue, 0.7);
+  }
+
+  .address__map {
+    margin: 0 auto;
+    width: 980px;
+  }
+}

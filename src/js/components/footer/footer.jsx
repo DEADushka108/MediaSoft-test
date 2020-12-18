@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { AppRoute } from '../../utils/const';
+import {Link} from 'react-router-dom';
+import {AppRoute} from '../../utils/const';
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

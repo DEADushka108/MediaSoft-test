@@ -1,4 +1,4 @@
-import { FilterSettings } from "./const";
+import {FilterSettings} from "./const";
 
 export const findItemById = (id, list) => {
   return list.find((item) => {
@@ -26,4 +26,8 @@ export const getUniqueRaceList = (list) => {
   const genresList = getRacesList(list);
   const uniqueRacesList = Array.from(new Set(genresList)).sort().slice(0, FilterSettings.MAX_COUNT);
   return [FilterSettings.DEFAULT_VALUE, ...uniqueRacesList];
+};
+
+export const validateText = (text) => {
+  return text.length !== 0;
 };

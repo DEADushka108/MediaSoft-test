@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {ActionCreator} from '../../store/ships/ships';
 import {connect} from 'react-redux';
 import {getUniqueRaceList} from '../../utils/utils';
 import {getActiveRace, getShipsList} from '../../store/ships/selectors';
+import {shipDetails} from '../../types/ships';
 
 const RaceList = (props) => {
   const {shipsList, currentRace, onRaceClick} = props;
@@ -13,8 +14,8 @@ const RaceList = (props) => {
   return <ul className="catalog__race-list">
     {uniqueRaceList.map((race, index) => {
       return <li key={`${race}-${index}`} className={`catalog__race-item ${(activeRace === race) ? `catalog__race-item--active` : ``}`} onClick={() => {
-       onRaceClick(race);
-       setActiveRace(race); 
+        onRaceClick(race);
+        setActiveRace(race);
       }}>
         <a className="catalog__race-link">{race}</a>
       </li>;
@@ -22,7 +23,11 @@ const RaceList = (props) => {
   </ul>;
 };
 
-RaceList.propTypes = {};
+RaceList.propTypes = {
+  shipsList: PropTypes.arrayOf(shipDetails).isRequired,
+  currentRace: PropTypes.string.isRequired,
+  onRaceClick: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => ({
   shipsList: getShipsList(state),
@@ -33,7 +38,7 @@ const mapDispatchToProps = (dispatch) => ({
   onRaceClick(race) {
     dispatch(ActionCreator.setActiveRace(race));
   },
-})
+});
 
 export {RaceList};
 export default connect(mapStateToProps, mapDispatchToProps)(RaceList);

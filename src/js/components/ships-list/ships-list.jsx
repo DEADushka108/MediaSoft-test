@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SmallCard from '../small-card/small-card';
+import {shipDetails} from '../../types/ships';
 
 const ShipsList = (props) => {
   const {ships, count} = props;
@@ -11,11 +12,12 @@ const ShipsList = (props) => {
       const {id} = ship;
       return <SmallCard key={id} ship={ship}/>;
     })}
-  </div>
+  </div>;
 };
 
 ShipsList.propTypes = {
-
-}
+  ships: PropTypes.arrayOf(shipDetails).isRequired,
+  count: PropTypes.number.isRequired,
+};
 
 export default ShipsList;

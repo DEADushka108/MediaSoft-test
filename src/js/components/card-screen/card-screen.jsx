@@ -1,15 +1,15 @@
-import React, { Fragment, useState } from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import Header from '../header/header';
 import Footer from '../footer/footer';
-import { getActiveRace, getCardCount, getFilteredList, getShipsList } from '../../store/ships/selectors';
-import { connect } from 'react-redux';
-import { ActionCreator as Ships } from '../../store/ships/ships';
+import {connect} from 'react-redux';
+import {ActionCreator as Ships} from '../../store/ships/ships';
+import {shipDetails} from '../../types/ships';
 
 
 const CardScreen = (props) => {
   const {ship, onAddCartClick} = props;
-  const {id, name, image, description, price, isInCart, rating} = ship;
+  const {name, image, description, price, isInCart, rating} = ship;
 
   return <Fragment>
     <Header/>
@@ -45,10 +45,13 @@ const CardScreen = (props) => {
 
     <Footer/>
 
-  </Fragment>
+  </Fragment>;
 };
 
-CardScreen.propTypes = {};
+CardScreen.propTypes = {
+  ship: shipDetails,
+  onAddCartClick: PropTypes.func.isRequired,
+};
 
 const mapDispatchToProps = (dispatch) => ({
   onAddCartClick(ship) {

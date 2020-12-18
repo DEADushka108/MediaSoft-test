@@ -1,5 +1,4 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, {Fragment} from 'react';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
@@ -33,7 +32,7 @@ const ContactScreen = () => {
 
     <Footer/>
 
-  </Fragment>
+  </Fragment>;
 };
 
 export default ContactScreen;

@@ -1,10 +1,7 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, {Fragment} from 'react';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import Tabs from '../tabs/tabs';
-import Tab from '../tab/tab';
-import { TabNames } from '../../utils/const';
 
 const FormScreen = () => {
 
@@ -12,15 +9,12 @@ const FormScreen = () => {
     <Header/>
     <main className="page-main">
       <h1 className="visually-hidden">Cart</h1>
-      <Tabs>
-        
-      </Tabs>
-      
+      <Tabs/>
     </main>
 
     <Footer/>
 
-  </Fragment>
+  </Fragment>;
 };
 
 export default FormScreen;

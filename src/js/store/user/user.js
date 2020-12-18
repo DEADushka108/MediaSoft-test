@@ -1,37 +1,38 @@
 import {extend} from '../../utils/utils';
 
 const initialState = {
-  cartList: {},
+  userInfo: {},
+  address: {},
 };
 
 const ActionType = {
-  GET_CART_LIST: `GET_CART_LIST`,
-  ADD_TO_CART: `ADD_TO_CART`,
+  SET_USER_INFO: `SET_USER_INFO`,
+  SET_DELIVERY_ADDRESS: `SET_DELIVERY_ADDRESS`
 };
 
 const ActionCreator = {
-  getCartList: (list) => ({
-    type: ActionType.GET_CART_LIST,
-    payload: list,
+  setUserInfo: (userData) => ({
+    type: ActionType.SET_USER_INFO,
+    payload: userData,
   }),
-  addToCart: (list) => ({
-    type: ActionCreator.ADD_TO_CART,
-    payload: list,
+  setDeliveryAddress: (address) => ({
+    type: ActionType.SET_DELIVERY_ADDRESS,
+    payload: address,
   })
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ActionType.GET_CART_LIST:
+    case ActionType.SET_USER_INFO:
       return extend(state, {
-        cartList: action.payload,
+        userInfo: action.payload,
       });
-    case ActionType.ADD_TO_CART:
+    case ActionType.SET_DELIVERY_ADDRESS:
       return extend(state, {
-        cartList: action.payload,
-      }) 
+        address: action.payload,
+      });
   }
   return state;
-}
+};
 
 export {reducer, ActionCreator, ActionType};

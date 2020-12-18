@@ -37,7 +37,7 @@ export const shipsList = [
     name: `Borg's Cube`,
     race: `Alien`,
     previewImage: `./img/content/borgs-cube-preview.jpg`,
-    image: `./img/bg/borgs-cube.png`,
+    image: `./img/bg/borgs-cube.webp`,
     rating: 6.6,
     price: 1002000,
     isInCart: false,
@@ -161,7 +161,7 @@ export const shipsList = [
     image: `./img/bg/serenity.png`,
     rating: 6.6,
     price: 90093,
-    isInCart: true,
+    isInCart: false,
     description: `A firefly's TV serial spaceship`,
   },
   {
@@ -172,7 +172,7 @@ export const shipsList = [
     image: `./img/bg/tardis.png`,
     rating: 6.6,
     price: 130,
-    isInCart: true,
+    isInCart: false,
     description: `Dr. Who`
   },
   {
@@ -183,7 +183,7 @@ export const shipsList = [
     image: `./img/bg/uss-enterprise.png`,
     rating: 6.6,
     price: 4000000,
-    isInCart: true,
+    isInCart: false,
     description: `A santa-barbara spaceship`,
   },
-]
+];

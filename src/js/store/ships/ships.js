@@ -1,9 +1,9 @@
-import { FilterSettings, MAX_CARD_COUNT } from '../../utils/const';
-import { extend } from '../../utils/utils';
-import { shipsList } from '../../mock/ships';
+import {FilterSettings, MAX_CARD_COUNT} from '../../utils/const';
+import {extend} from '../../utils/utils';
+import {shipsList} from '../../mock/ships';
 
 const initialState = {
-  shipsList: shipsList,
+  shipsList,
   activeRace: FilterSettings.DEFAULT_VALUE,
   cardCount: MAX_CARD_COUNT,
   activeCard: {},
@@ -35,7 +35,7 @@ const ActionCreator = {
     type: ActionType.UPDATE_SHIP_STATUS,
     payload: ship,
   }),
-}
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -56,9 +56,9 @@ const reducer = (state = initialState, action) => {
       return extend(state, {
         activeSort: action.payload,
         cardCount: MAX_CARD_COUNT,
-      })
+      });
   }
   return state;
-}
+};
 
 export {reducer, ActionType, ActionCreator};

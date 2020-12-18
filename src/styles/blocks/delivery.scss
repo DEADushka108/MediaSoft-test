@@ -21,13 +21,14 @@
 @media (min-width: $tablet-width) {
   .delivery {
     width: 620px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .delivery {
     width: 960px;
-    font-size: 22px;
+    font-size: 26px;
     line-height: 26px;
   }
 }

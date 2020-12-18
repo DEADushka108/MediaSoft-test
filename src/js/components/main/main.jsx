@@ -1,13 +1,14 @@
-import React, { Fragment } from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import ShipsList from '../ships-list/ships-list';
 import ShowMoreButton from '../show-more-button/show-more-button';
-import { getActiveRace, getCardCount, getFilteredList, getShipsList } from '../../store/ships/selectors';
-import { connect } from 'react-redux';
+import {getActiveRace, getCardCount, getFilteredList, getShipsList} from '../../store/ships/selectors';
+import {connect} from 'react-redux';
 import RaceList from '../race-list/race-list';
 import SortList from '../sort-list/sort-list';
+import {shipDetails} from '../../types/ships';
 
 const Main = (props) => {
   const {filteredShipsList, cardCount} = props;
@@ -35,10 +36,15 @@ const Main = (props) => {
 
     <Footer/>
 
-  </Fragment>
+  </Fragment>;
 };
 
-Main.propTypes = {};
+Main.propTypes = {
+  filteredShipsList: PropTypes.arrayOf(shipDetails).isRequired,
+  activeRace: PropTypes.string.isRequired,
+  cardCount: PropTypes.number.isRequired,
+  shipsList: PropTypes.arrayOf(shipDetails).isRequired,
+};
 
 const mapStateToProps = (state) => ({
   filteredShipsList: getFilteredList(state),

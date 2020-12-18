@@ -1,17 +1,21 @@
-import React, { Fragment } from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import Header from '../header/header';
 import Footer from '../footer/footer';
-import { setCartList } from '../../store/ships/selectors';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { AppRoute } from '../../utils/const';
-import { ActionCreator } from '../../store/ships/ships';
-import { redirectToRoute } from '../../store/redirect/redirect-action';
+import {setCartList} from '../../store/ships/selectors';
+import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {AppRoute} from '../../utils/const';
+import {ActionCreator} from '../../store/ships/ships';
+import {redirectToRoute} from '../../store/redirect/redirect-action';
+import {shipDetails} from '../../types/ships';
 
 const Cart = (props) => {
   const {shipsInCart, onCloseClick, redirect} = props;
-  const price = shipsInCart.reduce(function(prev, curr) { return prev + curr.price }, 0);
+  const price = shipsInCart.reduce(function (prev, curr) {
+    return prev + curr.price;
+  }, 0);
+
   return <Fragment>
     <Header/>
     <main className="page-main">
@@ -32,7 +36,7 @@ const Cart = (props) => {
                 <p className="cart__text">{ship.name}</p>
                 <p className="cart__text">{ship.price}$</p>
               </Link>
-            </li>
+            </li>;
           })}
         </ul>
         <div className="cart__total">
@@ -43,19 +47,25 @@ const Cart = (props) => {
           <button className="cart__button-submit" type="button" disabled={shipsInCart.length === 0} onClick={() => {
             redirect(`${AppRoute.FORM}`);
           }}>Buy</button>
-          <Link to={`${AppRoute.ROOT}`} className="cart__button-continue">Continue</Link> 
+          <Link to={`${AppRoute.ROOT}`} className="cart__button-continue">Continue</Link>
         </div>
       </section>
     </main>
 
     <Footer/>
 
-  </Fragment>
+  </Fragment>;
+};
+
+Cart.propTypes = {
+  shipsInCart: PropTypes.arrayOf(shipDetails).isRequired,
+  onCloseClick: PropTypes.func.isRequired,
+  redirect: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   shipsInCart: setCartList(state),
-})
+});
 
 const maoDispatchToProps = (dispatch) => ({
   onCloseClick(ship) {
@@ -65,7 +75,7 @@ const maoDispatchToProps = (dispatch) => ({
   redirect(route) {
     dispatch(redirectToRoute(route));
   },
-})
+});
 
-export {Cart}
+export {Cart};
 export default connect(mapStateToProps, maoDispatchToProps)(Cart);

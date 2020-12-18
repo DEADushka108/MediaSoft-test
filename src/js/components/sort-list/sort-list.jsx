@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {ActionCreator} from '../../store/ships/ships';
 import {connect} from 'react-redux';
-import { getActiveSort } from '../../store/ships/selectors';
+import {getActiveSort} from '../../store/ships/selectors';
 
 const SortList = (props) => {
   const {currentSort, onSortClick} = props;
@@ -10,7 +10,7 @@ const SortList = (props) => {
 
   return <ul className="catalog__sort-list">
     <li className={`catalog__sort-item ${(activeSort === `asc`) ? `catalog__sort-item--active` : ``}`} onClick={() => {
-      setActiveSort('asc');
+      setActiveSort(`asc`);
       onSortClick(`asc`);
     }}>
       <a className="catalog__sort-link">
@@ -21,22 +21,22 @@ const SortList = (props) => {
       </a>
     </li>
     <li className={`catalog__sort-item ${(activeSort === `des`) ? `catalog__sort-item--active` : ``}`} onClick={() => {
-      setActiveSort('des');
+      setActiveSort(`des`);
       onSortClick(`des`);
     }}>
       <a className="catalog__sort-link">
-      <svg className="catalog__sort-icon">
+        <svg className="catalog__sort-icon">
           <use xlinkHref="#sort-down"></use>
         </svg>
         <span className="visually-hidden">Descending</span>
       </a>
     </li>
     <li className="catalog__sort-item" onClick={() => {
-      setActiveSort('');
+      setActiveSort(``);
       onSortClick(``);
     }}>
       <a className="catalog__sort-link">
-      <svg className="catalog__sort-icon">
+        <svg className="catalog__sort-icon">
           <use xlinkHref="#refresh"></use>
         </svg>
         <span className="visually-hidden">Refresh</span>
@@ -45,17 +45,20 @@ const SortList = (props) => {
   </ul>;
 };
 
-SortList.propTypes = {};
+SortList.propTypes = {
+  currentSort: PropTypes.string,
+  onSortClick: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => ({
   currentSort: getActiveSort(state),
-})
+});
 
 const mapDispatchToProps = (dispatch) => ({
   onSortClick(sort) {
     dispatch(ActionCreator.setActiveSort(sort));
   }
-})
+});
 
 export {SortList};
 export default connect(mapStateToProps, mapDispatchToProps)(SortList);

@@ -6,10 +6,10 @@ const getCartList = (state) => {
 };
 
 const getCartCount = createSelector(
-  getCartList,
-  (list) => {
-    return list.length;
-  }
+    getCartList,
+    (list) => {
+      return list.length;
+    }
 );
 
 export {getCartCount, getCartList};

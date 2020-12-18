@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {redirectToRoute} from '../../store/redirect/redirect-action';
 import {connect} from 'react-redux';
 import {AppRoute} from '../../utils/const';
 import {Link} from 'react-router-dom';
-import { ActionCreator } from '../../store/ships/ships';
+import {ActionCreator} from '../../store/ships/ships';
+import {shipDetails} from '../../types/ships';
 
 const SmallCard = (props) => {
   const {ship, redirect, onAddCartClick} = props;
@@ -27,10 +28,13 @@ const SmallCard = (props) => {
       onAddCartClick(ship);
       setFavorite(!favorite);
     }}>{favorite ? `In cart` : `Add`} </button>
-  </article>
+  </article>;
 };
 
 SmallCard.propTypes = {
+  ship: shipDetails,
+  redirect: PropTypes.func.isRequired,
+  onAddCartClick: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => ({

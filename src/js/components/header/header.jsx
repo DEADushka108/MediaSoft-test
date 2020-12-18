@@ -1,9 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { setCartList } from '../../store/ships/selectors';
-import { AppRoute } from '../../utils/const';
+import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {setCartList} from '../../store/ships/selectors';
+import {AppRoute} from '../../utils/const';
 import PropTypes from 'prop-types';
+import {shipDetails} from '../../types/ships';
 
 const Header = (props) => {
   const {shipsList} = props;
@@ -26,15 +27,15 @@ const Header = (props) => {
             </li>
             <li className="main-nav__item">
               <Link to={AppRoute.CONTACT} className="main-nav__link">
-              <svg className="main-nav__icon">
+                <svg className="main-nav__icon">
                   <use xlinkHref="#social-group"></use>
-              </svg>
-              <span className="main-nav__text">Contact</span>
+                </svg>
+                <span className="main-nav__text">Contact</span>
               </Link>
             </li>
             <li className="main-nav__item">
               <Link to={AppRoute.CART} className="main-nav__link">
-              <svg className="main-nav__icon">
+                <svg className="main-nav__icon">
                   <use xlinkHref="#shopping-cart"></use>
                 </svg>
                 <span className="main-nav__text">Cart</span>
@@ -46,13 +47,15 @@ const Header = (props) => {
       </div>
     </header>
   );
-}
+};
 
-Header.propTypes = {};
+Header.propTypes = {
+  shipsList: PropTypes.arrayOf(shipDetails).isRequired,
+};
 
 const mapStateToProps = (state) => ({
   shipsList: setCartList(state),
-})
+});
 
-export {Header}
+export {Header};
 export default connect(mapStateToProps)(Header);
