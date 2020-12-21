@@ -1,5 +1,13 @@
 # Web resource StarShipsShop
 
+Author: [Kuznetsov Andrey](https://github.com/DEADushka108)
+
+Mail: <aakuznetsov.mgn@gmail.com>
+
+Let me introduce you to my project StarShipShop. It's a place where you can buy a Space ship from Sci-fi. 
+
+All you need to do is fork this repository to you PC and run follow command:
+
 ---
 ## Command
 
@@ -13,3 +21,5 @@
 * npm run test.jest - run test for components
 
 ---
+
+Enjoy :)
