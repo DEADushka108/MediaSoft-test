@@ -4,6 +4,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
+
+const optimization = () => {
+  const config = {}
+
+  if (isProd) {
+    config.minimizer = [
+      new OptimizeCssAssetsWebpackPlugin(),
+      new TerserWebpackPlugin(),
+    ]
+  }
+
+  return config;
+}
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -23,6 +41,7 @@ module.exports = {
     inline: true,
     progress: true,
   },
+  optimization: optimization(),
   module: {
     rules: [
       {
@@ -70,7 +89,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
       minify: {
-        collapseWhitespace: false,
+        collapseWhitespace: isProd,
       }
     }),
     new MiniCssExtractPlugin({
