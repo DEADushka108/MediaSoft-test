@@ -1,3 +1,15 @@
+export const ship = {
+  id: 3,
+  name: `Battlestar Galactica`,
+  race: `Human`,
+  previewImage: `./img/content/battlestar-galactica-preview.png`,
+  image: `./img/bg/battlestar-galactica.png`,
+  rating: 6.1,
+  price: 234122,
+  isInCart: false,
+  description: `Battlespaceship`
+};
+
 export const shipsList = [
   {
     id: 3,
@@ -7,7 +19,7 @@ export const shipsList = [
     image: `./img/bg/battlestar-galactica.png`,
     rating: 6.1,
     price: 234122,
-    isInCart: false,
+    isInCart: true,
     description: `Battlespaceship`
   },
   {
@@ -18,7 +30,7 @@ export const shipsList = [
     image: `./img/bg/borgs-cube.webp`,
     rating: 6.6,
     price: 1002000,
-    isInCart: false,
+    isInCart: true,
     description: `Common capabilities of cubes include high speed warp and transwarp drives, self-regeneration and multiple-redundant systems, adaptability in combat, and various energy weapons as well as tractor beams and cutting beams. Additionally, different types and size of Cubes have been observed as well as Borg Spheres and some smaller craft.`
   },
   {

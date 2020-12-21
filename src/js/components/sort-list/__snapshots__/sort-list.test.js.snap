@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should SortList component render correctly 1`] = `
+<ul
+  className="catalog__sort-list"
+>
+  <li
+    className="catalog__sort-item "
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__sort-link"
+    >
+      <svg
+        className="catalog__sort-icon"
+      >
+        <use
+          xlinkHref="#sort-up"
+        />
+      </svg>
+      <span
+        className="visually-hidden"
+      >
+        Ascending
+      </span>
+    </a>
+  </li>
+  <li
+    className="catalog__sort-item "
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__sort-link"
+    >
+      <svg
+        className="catalog__sort-icon"
+      >
+        <use
+          xlinkHref="#sort-down"
+        />
+      </svg>
+      <span
+        className="visually-hidden"
+      >
+        Descending
+      </span>
+    </a>
+  </li>
+  <li
+    className="catalog__sort-item"
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__sort-link"
+    >
+      <svg
+        className="catalog__sort-icon"
+      >
+        <use
+          xlinkHref="#refresh"
+        />
+      </svg>
+      <span
+        className="visually-hidden"
+      >
+        Refresh
+      </span>
+    </a>
+  </li>
+</ul>
+`;

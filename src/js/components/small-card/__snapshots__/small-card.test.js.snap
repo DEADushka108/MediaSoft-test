@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should SmallCard component render correctly 1`] = `
+<article
+  className="small-card"
+>
+  <div
+    className="small-card__image"
+    onClick={[Function]}
+  >
+    <img
+      className="small-card__img"
+      src="./img/content/battlestar-galactica-preview.png"
+    />
+  </div>
+  <div
+    className="small-card__wrapper"
+  >
+    <h3
+      className="small-card__name"
+    >
+      <a
+        className="small-card__link"
+        href="/card/3"
+        onClick={[Function]}
+      >
+        Battlestar Galactica
+      </a>
+    </h3>
+    <p
+      className="small-card__price"
+    >
+      234122
+      $
+    </p>
+  </div>
+  <button
+    className="small-card__button"
+    onClick={[Function]}
+    type="button"
+  >
+    Add
+     
+  </button>
+</article>
+`;

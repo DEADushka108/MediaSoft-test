@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should RaceList component render correctly 1`] = `
+<ul
+  className="catalog__race-list"
+>
+  <li
+    className="catalog__race-item catalog__race-item--active"
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__race-link"
+    >
+      All
+    </a>
+  </li>
+  <li
+    className="catalog__race-item "
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__race-link"
+    >
+      Alien
+    </a>
+  </li>
+  <li
+    className="catalog__race-item "
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__race-link"
+    >
+      Human
+    </a>
+  </li>
+  <li
+    className="catalog__race-item "
+    onClick={[Function]}
+  >
+    <a
+      className="catalog__race-link"
+    >
+      Mixed
+    </a>
+  </li>
+</ul>
+`;

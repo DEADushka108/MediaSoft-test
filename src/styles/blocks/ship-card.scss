@@ -47,7 +47,7 @@
   .ship-card {
     width: 620px;
   }
-  
+
   .ship-card__img {
     width: 620px;
     height: auto;
@@ -62,14 +62,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  } 
+  }
 
   .ship-card__description {
     width: 620px;
     align-self: center;
     text-align: center;
   }
-  
+
   .ship-card__button {
     margin-left: 170px;
   }
@@ -97,14 +97,14 @@
     flex-direction: column;
     flex-grow: 1;
     margin-left: 40px;
-  } 
+  }
 
   .ship-card__description {
     width: 400px;
     align-self: flex-start;
     text-align: left;
   }
-  
+
   .ship-card__button {
     margin-left: 0;
     margin-top: 40px;

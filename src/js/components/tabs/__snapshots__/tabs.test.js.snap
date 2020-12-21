@@ -1,0 +1,374 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should Tabs component render correctly 1`] = `
+Array [
+  <div
+    className="delivery"
+  >
+    <nav
+      className="delivery__nav"
+    >
+      <ol
+        className="delivery__list"
+      >
+        <li
+          className="delivery__item delivery__item--active"
+        >
+          <p
+            className="delivery__title"
+          >
+            1
+             
+            User
+          </p>
+        </li>
+        <li
+          className="delivery__item "
+        >
+          <p
+            className="delivery__title"
+          >
+            2
+             
+            Card
+          </p>
+        </li>
+        <li
+          className="delivery__item "
+        >
+          <p
+            className="delivery__title"
+          >
+            3
+             
+            Adress
+          </p>
+        </li>
+      </ol>
+    </nav>
+    <section
+      className="contact-us feedback"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      <form
+        className="feedback__form"
+      >
+        <fieldset
+          className="feedback__item user-info"
+        >
+          <legend
+            className="visually-hidden"
+          >
+            Introduce yourself an write us some word
+          </legend>
+          <div
+            className="user-info__item"
+          >
+            <label
+              className="user-info__label"
+              htmlFor="user-name"
+            >
+              Full name
+            </label>
+            <input
+              className="user-info__input"
+              id="user-name"
+              name="full-name"
+              onChange={[Function]}
+              placeholder="Your Name"
+              required={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="user-info__item"
+          >
+            <label
+              className="user-info__label"
+              htmlFor="user-email"
+            >
+              Email
+            </label>
+            <input
+              className="user-info__input"
+              id="user-email"
+              name="email"
+              onChange={[Function]}
+              placeholder="Your Email"
+              required={true}
+              type="email"
+            />
+          </div>
+          <div
+            className="user-info__item"
+          >
+            <label
+              className="user-info__label"
+              htmlFor="user-phone"
+            >
+              Phone
+            </label>
+            <input
+              className="user-info__input"
+              id="user-phone"
+              name="phone"
+              onChange={[Function]}
+              placeholder="Your Phone"
+              required={true}
+              type="tel"
+            />
+          </div>
+        </fieldset>
+        <button
+          className="feedback__button"
+          onClick={[Function]}
+          type="submit"
+        >
+          Next
+        </button>
+      </form>
+    </section>
+    <section
+      className="payment"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <a
+        className="feedback__button-back"
+        onClick={[Function]}
+      >
+        <svg
+          className="feedback__arrow-icon"
+        >
+          <use
+            xlinkHref="#icon-right-arrow"
+          />
+        </svg>
+        Back
+      </a>
+      <form
+        className="payment__form"
+      >
+        <div
+          className="payment__outro outro-number"
+        >
+          <p
+            className="outro-number__text"
+          >
+            Card number
+          </p>
+          <p
+            className="outro-number__text"
+          >
+            #### #### #### ####
+          </p>
+        </div>
+        <div
+          className="payment__outro outro-expire"
+        >
+          <p
+            className="outro-expire__text"
+          >
+            Expires
+          </p>
+          <p
+            className="outro-expire__text"
+          >
+            20/01
+          </p>
+        </div>
+        <div
+          className="payment__outro outro-name"
+        >
+          <p
+            className="outro-name__text"
+          >
+            Card holder
+          </p>
+          <p
+            className="outro-name__text"
+          >
+            Jonh Smith
+          </p>
+        </div>
+        <img
+          alt="Credit card"
+          className="payment__img"
+          src="./img/bg/credit-card-bg.png"
+        />
+        <fieldset
+          className="payment__fieldset"
+        >
+          <legend
+            className="visually-hidden"
+          >
+            Introduce yourself an write us some word
+          </legend>
+          <div
+            className="payment__item"
+          >
+            <label
+              className="payment__label"
+              htmlFor="card-number"
+            >
+              Card number
+            </label>
+            <input
+              className="payment__input"
+              id="card-number"
+              maxLength="16"
+              minLength="13"
+              name="card-number"
+              onChange={[Function]}
+              pattern="^[0-9]+$"
+              placeholder="0000 00000 0000 0000"
+              required={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="payment__item"
+          >
+            <label
+              className="payment__label"
+              htmlFor="card-name"
+            >
+              Card Name
+            </label>
+            <input
+              className="payment__input"
+              id="card-name"
+              name="card-name"
+              onChange={[Function]}
+              placeholder="Jonh Smith"
+              required={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="payment__item"
+          >
+            <div
+              className="payment__expire"
+            >
+              <label
+                className="payment__label"
+                htmlFor="month"
+              >
+                Expires
+              </label>
+              <input
+                className="payment__input payment__input-month"
+                id="month"
+                name="month"
+                onChange={[Function]}
+                required={true}
+                type="month"
+              />
+            </div>
+            <div
+              className="payment__cvv"
+            >
+              <label
+                className="payment__label"
+                htmlFor="card-cvv"
+              >
+                Secret code
+              </label>
+              <input
+                className="payment__input payment__input-cvv"
+                id="card-cvv"
+                name="card-cvv"
+                placeholder="CVV"
+                required={true}
+                type="number"
+              />
+            </div>
+          </div>
+        </fieldset>
+        <button
+          className="payment__button"
+          onClick={[Function]}
+          type="submit"
+        >
+          Next
+        </button>
+      </form>
+    </section>
+    <section
+      className="address"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <a
+        className="feedback__button-back"
+        onClick={[Function]}
+      >
+        <svg
+          className="feedback__arrow-icon"
+        >
+          <use
+            xlinkHref="#icon-right-arrow"
+          />
+        </svg>
+        Back
+      </a>
+      <form
+        className="address__form"
+      >
+        <fieldset
+          className="address__fieldset"
+        >
+          <legend
+            className="visually-hidden"
+          >
+            Introduce yourself an write us some word
+          </legend>
+          <div
+            className="address__item"
+          >
+            <label
+              className="address__label"
+              htmlFor="adress"
+            >
+              Delivery address
+            </label>
+            <input
+              className="address__input"
+              id="address"
+              name="address"
+              onChange={[Function]}
+              placeholder="Delivery Address"
+              required={true}
+              type="text"
+            />
+          </div>
+          <div
+            className="address__map"
+          >
+            <div />
+          </div>
+        </fieldset>
+        <button
+          className="feedback__button"
+          onClick={[Function]}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+  </div>,
+  ";",
+]
+`;
