@@ -37,7 +37,7 @@ export const shipsList = [
     name: `Borg's Cube`,
     race: `Alien`,
     previewImage: `./img/content/borgs-cube-preview.jpg`,
-    image: `./img/bg/borgs-cube.webp`,
+    image: `./img/bg/borgs-cube.png`,
     rating: 6.6,
     price: 1002000,
     isInCart: false,
