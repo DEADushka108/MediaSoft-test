@@ -6,7 +6,6 @@ const initialState = {
   shipsList,
   activeRace: FilterSettings.DEFAULT_VALUE,
   cardCount: MAX_CARD_COUNT,
-  activeCard: {},
   activeSort: ``,
 };
 

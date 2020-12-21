@@ -40,7 +40,12 @@ const getFilteredList = createSelector(
       list = race === FilterSettings.DEFAULT_VALUE ? list : list.filter((it) => {
         return it.race === race;
       });
-      return sort === `` ? list : sort === `asc` ? list.slice().sort((a, b) => a.price > b.price ? 1 : -1) : list.slice().sort((a, b) => a.price < b.price ? 1 : -1);
+      if (sort === `asc`) {
+        return list.slice().sort((a, b) => a.price > b.price ? 1 : -1);
+      } else if (sort === `des`) {
+        return list.slice().sort((a, b) => a.price < b.price ? 1 : -1);
+      }
+      return list;
     }
 );
 
