@@ -11,7 +11,11 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const optimization = () => {
-  const config = {}
+  const config = {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 
   if (isProd) {
     config.minimizer = [
@@ -19,7 +23,6 @@ const optimization = () => {
       new TerserWebpackPlugin(),
     ]
   }
-
   return config;
 }
 
