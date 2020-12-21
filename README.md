@@ -1,8 +1,8 @@
 # Web resource StarShipsShop
 
-Author: [Kuznetsov Andrey](https://github.com/DEADushka108)
+### Author: [Kuznetsov Andrey](https://github.com/DEADushka108)
 
-Mail: <aakuznetsov.mgn@gmail.com>
+### Mail: <aakuznetsov.mgn@gmail.com>
 
 Let me introduce you to my project StarShipShop. It's a place where you can buy a Space ship from Sci-fi. 
 
