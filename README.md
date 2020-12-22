@@ -4,9 +4,9 @@
 
 ### Mail: <aakuznetsov.mgn@gmail.com>
 
-Let me introduce you to my project StarShipShop. It's a place where you can buy a Space ship from Sci-fi. 
+Let me introduce you to my project StarShipShop. It's a place where you can buy a Space ship from Sci-fi(movies, animation, TV serials,  etc.). Adaptive for phones, tablets and desktop. 
 
-All you need to do is fork this repository to you PC and run follow command:
+All you need to do is clone this repository to you PC/Mac and run follow command:
 
 ---
 ## Command
@@ -21,5 +21,7 @@ All you need to do is fork this repository to you PC and run follow command:
 * npm run test.jest - run test for components
 
 ---
+
+### Used technology: SASS, Webpack, React, Redux. This recource full adaptive 
 
 Enjoy :)
