@@ -22,6 +22,6 @@ All you need to do is clone this repository to you PC/Mac and run follow command
 
 ---
 
-### Used technology: SASS, Webpack, React, Redux. This recource full adaptive 
+### Used technology: SASS, Webpack, React, Redux.
 
 Enjoy :)
